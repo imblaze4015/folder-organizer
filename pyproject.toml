@@ -12,4 +12,4 @@ license = {text = "MIT"}
 dependencies = []
 
 [project.optional-dependencies]
-test = []
+test = ["pytest", "ruff"]
