@@ -1,10 +1,14 @@
 from pathlib import Path
 
 def organize_folder(target_folder: str):
-    
-    target_folder_path = Path.home() / target_folder
+    # Convert given folder name into Path
+    target_folder_path = Path.home() / target_folder 
 
     try:
+        """
+        Grab the next item from iterator. It will route to except,
+        if folder doesn't exists or empty.
+        """
         next(target_folder_path.iterdir())
         
     except FileNotFoundError as e:
@@ -12,5 +16,4 @@ def organize_folder(target_folder: str):
         
     except StopIteration:
         print(f"'{target_folder_path.name}' contains zero items")
-    
     
