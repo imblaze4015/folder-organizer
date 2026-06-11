@@ -17,3 +17,5 @@ def organize_folder(target_folder: str):
     except StopIteration:
         print(f"'{target_folder_path.name}' contains zero items")
     
+
+organize_folder("Public/test.txt")
