@@ -3,9 +3,9 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "download_organizer"
+name = "folder_organizer"
 version = "0.1.0"
-description = "A tool that sorts download folder files by extension."
+description = "A tool that sort folder files by extension."
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
