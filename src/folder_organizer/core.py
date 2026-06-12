@@ -7,7 +7,7 @@ def organize_folder(target_folder: str):
     try:
         """
         Grab the next item from iterator. It will route to except,
-        if folder doesn't exists or empty.
+        if folder doesn't exists or empty
         """
         next(target_folder_path.iterdir())
         
@@ -17,5 +17,6 @@ def organize_folder(target_folder: str):
     except StopIteration:
         print(f"'{target_folder_path.name}' contains zero items")
     
+    except NotADirectoryError as e:
+        print(f"[{type(e).__name__}]: '{target_folder_path.name}' is a file, not a folder")
 
-organize_folder("Public/test.txt")
