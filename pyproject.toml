@@ -13,3 +13,6 @@ dependencies = []
 
 [project.optional-dependencies]
 test = ["pytest", "ruff"]
+
+[project.scripts]
+organize-folder = "folder_organizer.__main__:main"
