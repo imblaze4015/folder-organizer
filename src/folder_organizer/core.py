@@ -1,4 +1,3 @@
-import pytest
 from pathlib import Path
 
 def organize_folder(target_folder: str):
