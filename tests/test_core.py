@@ -1,5 +1,7 @@
-import pytest
 from pathlib import Path
+
+import pytest
+
 from src.folder_organizer.core import organize_folder
 
 
@@ -11,7 +13,10 @@ def mock_home(tmp_path, monkeypatch):
 
 
 def test_organize_folder_success(mock_home):
-    """Verifies that common files, extension-less files, and case variations are correctly moved."""
+    """
+    Verifies that common files, extension-less files,
+    and case variations are correctly moved.
+    """
     # 1. Setup a dummy target directory inside our fake home folder
     target_dir = mock_home / "Downloads"
     target_dir.mkdir()
@@ -41,14 +46,20 @@ def test_organize_folder_success(mock_home):
 
 
 def test_file_not_found(mock_home):
-    """Verifies that FileNotFoundError is raised and passes outward when directory doesn't exist."""
+    """
+    Verifies that FileNotFoundError is raised and
+    passes outward when directory doesn't exist.
+    """
     # We do not create the folder "MissingFolder" inside mock_home
     with pytest.raises(FileNotFoundError):
         organize_folder("MissingFolder")
 
 
 def test_not_a_directory(mock_home):
-    """Verifies that NotADirectoryError is raised when trying to organize a literal file instead of a folder."""
+    """
+    Verifies that NotADirectoryError is raised when trying to
+    organize a literal file instead of a folder.
+    """
     # Create a file matching the target string name instead of a folder
     fake_folder_file = mock_home / "is_actually_a_file.txt"
     fake_folder_file.touch()
