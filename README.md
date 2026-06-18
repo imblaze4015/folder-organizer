@@ -14,7 +14,7 @@ A Python tool that sorts files in a folder by their extension into subfolders.
 
 1. **Clone the repository:**  
     ```bash
-   git clone https://github.com/your-username/folder-organizer.git
+   git clone https://github.com/imblaze4015/folder-organizer.git
     ```
 
 2. **Create and activate a virtual environment:**
