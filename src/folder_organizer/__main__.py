@@ -1,6 +1,6 @@
 import sys
 
-from .core import organize_folder
+from core import organize_folder
 
 
 def main():
