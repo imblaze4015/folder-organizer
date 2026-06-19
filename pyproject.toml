@@ -14,10 +14,11 @@ readme-content-type = "text/markdown"
 requires-python = ">=3.8"
 license = {text = "MIT"}
 dependencies = []
+project = [
+    {name = "Abdul Muhaymen Ali", email = "abdulmuhaymenali@gmail.com"}
+]
 
-[[project.authors]]
-name = "Abdul Muhaymen Ali"
-email = "abdulmuhaymenali@gmail.com"
+
 
 [project.optional-dependencies]
 test = ["pytest", "ruff"]
